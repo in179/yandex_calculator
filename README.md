@@ -13,11 +13,11 @@
 
 ## Спецификация API
 
-# Эндпоинт
+### Эндпоинт
 
 `POST /api/v1/calculate`
 
-# Формат запроса
+### Формат запроса
 
 ```json
 {
@@ -25,7 +25,7 @@
 }
 ```
 
-# Формат ответа
+### Формат ответа
 
 Успешное вычисление (HTTP 200)
 ```json
@@ -34,20 +34,20 @@
 }
 ```
 
-# Неверное выражение (HTTP 422)
+### Неверное выражение (HTTP 422)
 ```json
 {
   "error": "Expression is not valid"
 }
 ```
-# Внутренняя ошибка сервера (HTTP 500)
+### Внутренняя ошибка сервера (HTTP 500)
 ```json
 {
   "error": "Internal server error"
 }
 ```
 ## Примеры использования
-# Успешный запрос
+### Успешный запрос
 ```bash
 curl --location 'localhost:8080/api/v1/calculate' \
 --header 'Content-Type: application/json' \
@@ -55,13 +55,13 @@ curl --location 'localhost:8080/api/v1/calculate' \
   "expression": "2+2*2"
 }'
 ```
-# Ответ:
+### Ответ:
 ```json
 {
   "result": "6.000000"
 }
 ```
-# Неверное выражение
+### Неверное выражение
 ```bash
 curl --location 'localhost:8080/api/v1/calculate' \
 --header 'Content-Type: application/json' \
@@ -69,15 +69,15 @@ curl --location 'localhost:8080/api/v1/calculate' \
   "expression": "2+2**2"
 }'
 ```
-# Ответ:
+### Ответ:
 ```json
 {
   "error": "Expression is not valid"
 }
 ```
-# Внутренняя ошибка сервера
+### Внутренняя ошибка сервера
 
-# Если произошла неожиданная ошибка:
+### Если произошла неожиданная ошибка:
 ```json
 {
   "error": "Internal server error"
@@ -85,18 +85,18 @@ curl --location 'localhost:8080/api/v1/calculate' \
 ```
 ## Установка и запуск
 
-# Клонируйте репозиторий:
+### Клонируйте репозиторий:
 
 ```bash
 git clone https://github.com/in179/yandex_calculator.git
 ```
 
-# Перейдите в папку проекта:
+### Перейдите в папку проекта:
 ```bash
 cd calc_service
 ```
-# Запустите сервис:
+### Запустите сервис:
 ```bash
 go run ./main.go
 ```
-# Сервис будет доступен по адресу http://localhost:8080.
+## Сервис будет доступен по адресу http://localhost:8080.
