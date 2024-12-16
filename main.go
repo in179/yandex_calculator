@@ -8,6 +8,7 @@ import (
 	"go/token"
 	"io"
 	"log"
+	"math"
 	"net/http"
 	"strconv"
 )
@@ -86,7 +87,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	res, err := Calc(req.Expr)
-	if err != nil {
+	if err != nil || math.IsInf(res, 0) || math.IsNaN(res) {
 		resp := Res{Err: "Expression is not valid"}
 		w.WriteHeader(http.StatusUnprocessableEntity)
 		json.NewEncoder(w).Encode(resp)
