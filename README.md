@@ -93,7 +93,7 @@ git clone https://github.com/in179/yandex_calculator.git
 
 ### Перейдите в папку проекта:
 ```bash
-cd calc_service
+cd main
 ```
 ### Запустите сервис:
 ```bash
