@@ -66,7 +66,7 @@ curl --location 'localhost:8080/api/v1/calculate' \
 curl --location 'localhost:8080/api/v1/calculate' \
 --header 'Content-Type: application/json' \
 --data '{
-  "expression": "2+2**2"
+  "expression": "2 / 0"
 }'
 ```
 ### Ответ:
@@ -93,7 +93,7 @@ git clone https://github.com/in179/yandex_calculator.git
 
 ### Перейдите в папку проекта:
 ```bash
-cd main
+cd yandex_calculator
 ```
 ### Запустите сервис:
 ```bash
