@@ -99,3 +99,5 @@ cd yandex_calculator
 go run ./main.go
 ```
 ## Сервис будет доступен по адресу http://localhost:8080.
+
+### По любым вопросам писать t.me/in179
